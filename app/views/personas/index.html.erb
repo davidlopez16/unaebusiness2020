@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<div class="row center-xs">
+  <div class="col-xs-12 col-md-10">
+     <div class="box text-left">
+      <% if user_signed_in? %><h1>Personas</h1>
+       <button> <%= link_to 'Crear', new_persona_path %> </button>
+            <table class="table">
+                
+                      <thead>
+                        <tr>
+                          <th>Usuario</th>
+                          <th>Nombre</th>
+                          <th>Apellido</th>
+                          <th>Cedula</th>
+                          <th>Correo</th>
+                          <th>Carrera</th>
+                          <th>Semestre</th>
+                          <th colspan="3"></th>
+                        </tr>
+                      </thead>
+
+          <tbody>
+            <% @personas.each do |persona| %>
+              <tr>
+                <td><%= persona.usuario %></td>
+                <td><%= persona.nombre %></td>
+                <td><%= persona.apellido %></td>
+                <td><%= persona.cedula %></td>
+                <td><%= persona.correo %></td>
+                <td><%= persona.carrera %></td>
+                <td><%= persona.semestre %></td>
+                <td><%= link_to 'Ver', persona %></td>
+                <td><%= link_to 'Editar', edit_persona_path(persona) %></td>
+                <td><%= link_to 'Eliminar', persona, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+        <br>
+        <%end%>
+    </div>
+  </div>
+</div>

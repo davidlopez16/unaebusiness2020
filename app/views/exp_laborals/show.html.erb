@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @exp_laboral.user %>
+</p>
+
+<p>
+  <strong>Postulante:</strong>
+  <%= @exp_laboral.postulante %>
+</p>
+
+<p>
+  <strong>Nombre empresa:</strong>
+  <%= @exp_laboral.nombre_empresa %>
+</p>
+
+<p>
+  <strong>Rubro empresa:</strong>
+  <%= @exp_laboral.rubro_empresa %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @exp_laboral.cargo %>
+</p>
+
+<p>
+  <strong>Fecha entrada:</strong>
+  <%= @exp_laboral.fecha_entrada %>
+</p>
+
+<p>
+  <strong>Fecha salida:</strong>
+  <%= @exp_laboral.fecha_salida %>
+</p>
+
+<p>
+  <strong>Salario:</strong>
+  <%= @exp_laboral.salario %>
+</p>
+
+<p>
+  <strong>Personal a cargo:</strong>
+  <%= @exp_laboral.personal_a_cargo %>
+</p>
+
+<p>
+  <strong>Descripcion de tareas:</strong>
+  <%= @exp_laboral.descripcion_tareas %>
+</p>
+
+<p>
+  <strong>Referencias:</strong>
+  <%= @exp_laboral.referencias %>
+</p>
+
+<%= link_to 'Edit', edit_exp_laboral_path(@exp_laboral) %> |
+<%= link_to 'Back', exp_laborals_path %>

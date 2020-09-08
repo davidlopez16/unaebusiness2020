@@ -1,0 +1,36 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+     <div class="box text-left">
+		<div>
+			<strong>Nombre:</strong>
+			<%= @empresa.nombre %>
+		</div><br>
+		<div>
+			<strong>Ruc:</strong>
+			<%= @empresa.ruc %>
+		</div><br>
+		<div>
+			<strong>Dirección:</strong>
+			<%= @empresa.direccion %>
+		</div><br>
+		<div>
+			<strong>Telefono:</strong>
+			<%= @empresa.telefono %>
+		</div><br>
+		<div>
+			<strong>Email:</strong>
+			<%= @empresa.email %>
+		</div><br>
+		<div>
+			<strong>Fundador:</strong>
+			<%= @empresa.fundador %>
+		</div><br>
+		<div>
+			<%= link_to "Atrás |", empresas_path %>
+			<%= link_to "Editar", edit_empresa_path(@empresa), class:"edit" %>
+		</div>
+     
+
+     </div>
+ </div>
+</div>

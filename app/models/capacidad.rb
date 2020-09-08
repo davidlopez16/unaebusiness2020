@@ -1,0 +1,2 @@
+class Capacidad < ApplicationRecord
+end

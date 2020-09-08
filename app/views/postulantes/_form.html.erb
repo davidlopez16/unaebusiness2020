@@ -1,0 +1,67 @@
+<h1><%= name %> Datos Personales</h1>
+
+		<%= form_for(@postulante) do |f| %>
+			<% @postulante.errors.full_messages.each do |message| %>
+			<div class="be-red white top-space">* <%= message %></div>
+			<%end %>
+
+			<div class="field"> 
+				<%= f.label :cedula %><!--:cedula es el campo de la base de datos -->
+				<%= f.text_field :cedula, class:"form-control"  %>
+			</div>
+			<div class="field">
+				<%= f.label :nombre_y_apellido %>
+				<%= f.text_field :nombres, class:"form-control"  %>
+			</div>
+			<div class="field">
+				<%= f.label :fecha_de_nacimiento %>
+				<%= f.date_field :fecha_nacimiento, class:"form-control"  %>
+			</div>
+			<div class="field">
+				<%= f.label :edad %>
+				<%= f.text_field :edad, class:"form-control"  %>
+			</div>
+
+			<div class="field">
+				<%= f.label :sexo %>
+				<%= f.select :sexo, options_for_select(['Hombre', 'Mujer']) %>
+			</div>
+
+			<div class="field">
+				<%= f.label :nacionalidad %>
+				<%= f.text_field :nacionalidad, class:"form-control"  %>
+			</div>
+			<div class="field">
+				<%= f.label :estado_civil %>
+				<%= f.select :estado_civil, options_for_select(['Soltero/a', 'Casado/a', 'Divorciado/a', 'Viudo/a']) %>
+			</div>
+			<div class="field">
+				<%= f.label :telefono %>
+				<%= f.text_field :telefono, class:"form-control"  %>
+			</div>
+			<div class="field">
+				<%= f.label :dirección %>
+				<%= f.text_field :direccion, class:"form-control"  %>
+			</div>
+
+
+			<div class="field">
+				<%= f.label :correo_electrónico %>
+				<%= f.text_field :email, class:"form-control"  %>
+			</div>
+				
+			<div class="field">
+				<%= f.label :idioma %>
+				<%= f.text_field :idioma, class:"form-control"  %>
+			</div>
+
+			<div class="field">
+				<%= f.label :Cuéntanos_mas_sobre_ti %>
+				<%= f.text_field :mas_info, class:"form-control"  %>
+			</div>
+			    
+			<div class="field">
+				<%= f.submit "Guardar", class:"btn white" %>
+			</div>
+		<% end %>
+</div>

@@ -1,0 +1,2 @@
+class Titulo < ApplicationRecord
+end

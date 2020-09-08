@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  postulante: one
+  usuario: MyString
+  contrasenha: MyString
+  confir_contra: MyString
+  nombre: MyString
+  apellido: MyString
+  cedula: 1
+  correo: MyString
+  confir_correo: MyString
+  carrera: MyString
+  semestre: 1
+
+two:
+  user: two
+  postulante: two
+  usuario: MyString
+  contrasenha: MyString
+  confir_contra: MyString
+  nombre: MyString
+  apellido: MyString
+  cedula: 1
+  correo: MyString
+  confir_correo: MyString
+  carrera: MyString
+  semestre: 1

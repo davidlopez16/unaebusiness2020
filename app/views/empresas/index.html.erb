@@ -1,0 +1,39 @@
+<div class="row center-xs">
+  <div class="col-xs-12 col-md-10">
+     <div class="box text-left">
+                
+        <table class="table">
+          
+          <thead>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>R.U.C.</th>
+                      <th>Dirección</th>
+                      <th>Telefono</th>
+                      <th>E-mail</th>
+                      <th>Fundador</th>
+                      <th colspan="3"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+              <% @empresas.each do |empresa| %>
+                <tr>
+                  <td><%= link_to empresa.nombre, empresa %></td>
+                  <td><%= empresa.ruc %></td>
+                  <td><%= empresa.direccion %></td>
+                  <td><%= empresa.telefono %></td>
+                  <td><%= empresa.email %></td> 
+                  <td><%= empresa.fundador %></td>
+                  <td><%= link_to 'Editar', edit_empresa_path(empresa), class:"edit" %></td>
+                          <td><%= link_to "Eliminar", empresa, method: :delete, class:"red", data: { confirm: '¿Estas seguro que desea Eliminar?' } %>
+                          </td>
+                </tr>
+              <% end %>
+                  </tbody>
+            </table>
+
+
+     </div>
+   </div>
+ </div>

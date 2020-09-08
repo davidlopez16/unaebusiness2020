@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<% if user_signed_in? %><button> <%= link_to 'Crear Perfil', new_postulante_path %> </button> <%end%><br>
+<p>
+  <strong>Usuario:</strong>
+  <%= @persona.usuario %>
+</p>
+
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @persona.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @persona.apellido %>
+</p>
+
+<p>
+  <strong>Cedula:</strong>
+  <%= @persona.cedula %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @persona.correo %>
+</p>
+
+<p>
+  <strong>Carrera:</strong>
+  <%= @persona.carrera %>
+</p>
+
+<p>
+  <strong>Semestre:</strong>
+  <%= @persona.semestre %>
+</p>
+
+<%= link_to 'Editar', edit_persona_path(@persona) %> |
+<%= link_to 'Atras', root_path %>

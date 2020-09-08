@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Idiomas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descripcion</th>
+      <th>Nivel</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @idiomas.each do |idioma| %>
+      <tr>
+        <td><%= idioma.descripcion %></td>
+        <td><%= idioma.nivel %></td>
+        <td><%= link_to 'Show', idioma %></td>
+        <td><%= link_to 'Edit', edit_idioma_path(idioma) %></td>
+        <td><%= link_to 'Destroy', idioma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Idioma', new_idioma_path %>

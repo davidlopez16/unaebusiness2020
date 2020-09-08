@@ -1,0 +1,63 @@
+<%= form_for([@postulante, @exp_laboral]) do |form| %>
+  <% if @exp_laboral.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exp_laboral.errors.count, "error") %> prohibited this exp_laboral from being saved:</h2>
+
+      <ul>
+      <% @exp_laboral.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= form.label :nombre_empresa %>
+    <%= form.text_field :nombre_empresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rubro_empresa %>
+    <%= form.text_field :rubro_empresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cargo %>
+    <%= form.text_field :cargo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_entrada %>
+    <%= form.date_field :fecha_entrada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_salida %>
+    <%= form.date_field :fecha_salida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salario %>
+    <%= form.number_field :salario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personal_a_cargo %>
+    <%= form.text_field :personal_a_cargo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion_tareas %>
+    <%= form.text_area :descripcion_tareas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :referencias %>
+    <%= form.text_area :referencias %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

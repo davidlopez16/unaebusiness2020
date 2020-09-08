@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @estudio.user %>
+</p>
+
+<p>
+  <strong>Postulante:</strong>
+  <%= @estudio.postulante %>
+</p>
+
+<p>
+  <strong>Nivel:</strong>
+  <%= @estudio.nivel %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @estudio.titulo %>
+</p>
+
+<p>
+  <strong>Institucion:</strong>
+  <%= @estudio.institucion %>
+</p>
+
+<p>
+  <strong>Situacion:</strong>
+  <%= @estudio.situacion %>
+</p>
+<p>
+  <strong>Año de graduación:</strong>
+  <%= @estudio.anho_graduacion %>
+</p>
+
+<%= link_to 'Edit', edit_estudio_path(@estudio) %> |
+<%= link_to 'Back', estudios_path %>

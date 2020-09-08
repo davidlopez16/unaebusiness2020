@@ -1,0 +1,124 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+     <div class="box text-left">
+			<div>
+				<strong><h1><%= @postulante.nombres %></h1></strong>
+			</div><hr>
+			<div>
+				<strong>Cédula:</strong>
+				 <%= @postulante.cedula %>
+			</div><br>
+			<div>
+				<strong>Fecha de Nacimiento:</strong>
+				<%= @postulante.fecha_nacimiento %>
+			</div><br>
+			
+			<div>
+				<strong>Edad:</strong>
+				<%= @postulante.edad %>
+			</div><br>
+			<div>
+				<strong>Sexo:</strong>
+				<%= @postulante.sexo %>
+			</div><br>
+			
+			<div>
+				<strong>Nacionalidad:</strong>
+				<%= @postulante.nacionalidad %>
+			</div><br>
+			<div>
+				<strong>Estado Civil:</strong>
+				<%= @postulante.estado_civil %>
+			</div><br>
+			<div>
+				<strong>Telefono/Celular:</strong>
+				<%= @postulante.telefono %>
+			</div><br>
+			<div>
+				<strong>Dirección:</strong>
+				<%= @postulante.direccion %>
+			</div><br>
+
+			<div>
+				<strong>Correo Electrónico:</strong>
+				<%= @postulante.email %>
+			</div><br>
+			<div>
+				<strong>Cuéntanos sobre ti:</strong>
+				<%= @postulante.mas_info %>
+			</div><br>
+			<div>
+				<strong>Idioma:</strong>
+				<%= @postulante.idioma %>
+			</div><br>
+			
+			<div>
+				<%= link_to "Atrás |", postulantes_path %>
+				<%= link_to "| Editar |", edit_postulante_path(@postulante), class:"edit" %>
+			</div>
+			<hr>
+			<div class="field">
+				<h3><u>Estudios</u></h3>
+					<table class="table">
+						<thead>
+				            <tr>
+				              <th>Nivel</th>
+				              <th>Titulo</th>
+				              <th>Institucion</th>
+				              <th>Situación</th>
+				              <th>Año de Graduación</th>
+							</tr>
+						</thead>
+						<tbody>	
+							<% @postulante.estudios.each do |estudio| %>
+								<tr>
+									<td><%= estudio.nivel %></td>
+									<td><%= estudio.titulo %></td>
+									<td><%= estudio.institucion %></td>
+									<td><%= estudio.situacion %></td>
+									<td><%= estudio.anho_graduacion %></td>
+								</tr>
+							<%end%>
+						</tbody>
+				</table><hr>
+				<%=render 'estudios/form' %>
+			</div><hr>
+
+			<h3><u>Experiencia Laboral</u></h3>
+			<table class="table">
+						<thead>
+				            <tr>
+				              <th>Nombre Empresa</th>
+				              <th>Rubro</th>
+				              <th>Cargo</th>
+				              <th>Fecha de Entrada</th>
+				              <th>Fecha de Salida</th>
+				              <th>Salario</th>
+				              <th>Personal a cargo</th>
+				              <th>Descripción Tareas</th>
+				              <th>Referencias</th>
+							</tr>
+						</thead>
+						<tbody>	
+							<% @postulante.exp_laborals.each do |exp_laboral| %>
+								<tr>
+									<td><%= exp_laboral.nombre_empresa %></td>
+									<td><%= exp_laboral.rubro_empresa %></td>
+									<td><%= exp_laboral.cargo %></td>
+									<td><%= exp_laboral.fecha_entrada %></td>
+									<td><%= exp_laboral.fecha_salida %></td>
+									<td><%= exp_laboral.salario %></td>
+									<td><%= exp_laboral.personal_a_cargo %></td>
+									<td><%= exp_laboral.descripcion_tareas %></td>
+									<td><%= exp_laboral.referencias %></td>
+									
+								</tr>
+							<%end%>
+						</tbody>
+				</table>
+			<%= render 'exp_laborals/form' %>
+		   </div>
+		</div>
+	</div>
+</div>
+			

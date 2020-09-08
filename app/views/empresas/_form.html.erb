@@ -1,0 +1,36 @@
+<h3><%= name %> Empresa</h3>
+	<%= form_for(@empresa) do |f| %>
+		<% @empresa.errors.full_messages.each do |message| %>
+		<div class="be-red white top-space">* <%= message %></div>
+		<%end %>
+
+		<div class="field">
+			<%= f.label :ruc %>
+			<%= f.text_field :ruc, class:"form-control"  %>
+		</div>
+		<div class="field">
+			<%= f.label :nombre %>
+			<%= f.text_field :nombre, class:"form-control"  %>
+		</div>
+		<div class="field">
+			<%= f.label :dirección %>
+			<%= f.text_field :direccion, class:"form-control"  %>
+		</div>
+		<div class="field">
+			<%= f.label :telefono %>
+			<%= f.text_field :telefono, class:"form-control"  %>
+		</div>
+		<div class="field">
+			<%= f.label :email %>
+			<%= f.text_field :email, class:"form-control"  %>
+		</div>
+		<div class="field">
+			<%= f.label :fundador %>
+			<%= f.text_field :fundador, class:"form-control"  %>
+		</div>
+
+		<div class="field">
+			<%= f.submit "Guardar", class:"btn white" %>
+		</div>
+					
+	<% end %>

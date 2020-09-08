@@ -1,0 +1,14 @@
+<h1 class="center-xs">Bienvenidos a Unae Bussiness</h1><hr>
+          <div class="center-xs">
+            <% if user_signed_in? %>
+	             <button class="btn white"> <%= link_to "Personas", personas_path  %></button>
+	              <button class="btn white"> <%= link_to "Postulantes", postulantes_path  %></button>
+		    <%else%>
+	            <button class="btn white"> <%= link_to "Soy Alumno", new_persona_path  %></button>
+	          
+	            <button class="btn white"> <%= link_to "Registrar mi empresa", new_empresa_path  %></button>
+            <%end%>
+          </div><hr><br>			
+<%= render "buscar" %><br>
+<%= render "somos" %>
+

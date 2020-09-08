@@ -1,0 +1,61 @@
+<div class="row center-xs">
+  <div class="col-xs-12 col-md-10">
+     <div class="box text-left">
+     <h1> <%= name %> Solicitud de Registro </h1>
+          <%= form_for(@persona) do |form| %>
+      <% if @persona.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@persona.errors.count, "error") %> prohibited this persona from being saved:</h2>
+
+          <ul>
+          <% @persona.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+
+      <div class="field">
+        <%= form.label :usuario %>
+        <%= form.text_field :usuario %>
+      </div>
+
+
+      <div class="field">
+        <%= form.label :nombre %>
+        <%= form.text_field :nombre %>
+      </div>
+
+      <div class="field">
+        <%= form.label :apellido %>
+        <%= form.text_field :apellido %>
+      </div>
+
+      <div class="field">
+        <%= form.label :cédula %>
+        <%= form.number_field :cedula %>
+      </div>
+
+      <div class="field">
+        <%= form.label :correo_electrónico %>
+        <%= form.text_field :correo %>
+      </div>
+
+      <div class="field">
+        <%= form.label :carrera %>
+        <%= form.select :carrera, options_for_select(['--Selecciona la Carrera--', 'Lic. Analisis de sistemas', 'Lic. Diseño Gráfico', 'Lic. Diseño de Modas', 'Derecho', 'Lic. Contaduria pública', 'Lic. Administración de Empresas', 'Ing. Comercial', 'Lic. Comercio Internacional', 'Farmacia']) %>
+      </div>
+
+      <div class="field">
+        <%= form.label :semestre_Número %>
+        <%= form.number_field :semestre %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Registrame!", class:"btn white"  %>
+      </div>
+    <% end %>
+</div>
+</div>
+</div>
