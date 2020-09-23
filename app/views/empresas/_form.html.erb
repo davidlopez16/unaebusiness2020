@@ -31,6 +31,16 @@
 
 		<div class="field">
 			<%= f.submit "Guardar", class:"btn white" %>
+		 <% if user_signed_in? %>	
+			<%= link_to 'Atras', empresas_path, class:"btn" %>
+
+		<%else%>
+			<%= link_to 'Atras', root_path, class:"btn" %>
+		 <%end%>
+
+
+
 		</div>
+
 					
 	<% end %>

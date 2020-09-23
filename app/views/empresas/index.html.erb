@@ -25,6 +25,7 @@
                   <td><%= empresa.telefono %></td>
                   <td><%= empresa.email %></td> 
                   <td><%= empresa.fundador %></td>
+                  <td><%= link_to 'Ver', empresa %></td>
                   <td><%= link_to 'Editar', edit_empresa_path(empresa), class:"edit" %></td>
                           <td><%= link_to "Eliminar", empresa, method: :delete, class:"red", data: { confirm: '¿Estas seguro que desea Eliminar?' } %>
                           </td>
