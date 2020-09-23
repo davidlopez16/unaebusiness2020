@@ -2,9 +2,18 @@
           <div class="center-xs">
             <% if user_signed_in? %>
 	             <button class="btn white"> <%= link_to "Personas registradas", personas_path  %></button>
+
+	              <button class="btn white"> <%= link_to "Empresas", empresas_path  %></button>
+
+
 	              <button class="btn white"> <%= link_to "Postulados", postulantes_path  %></button>
+
+
+
 		    <%else%>
-	            <button class="btn white"> <%= link_to "Soy Alumno", new_persona_path  %></button>
+
+
+	            <button class="btn white"> <%= link_to "Perfil Alumno", new_persona_path  %></button>
 	          
 	            <button class="btn white"> <%= link_to "Registrar mi empresa", new_empresa_path  %></button>
             <%end%>
